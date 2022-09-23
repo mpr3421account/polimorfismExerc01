@@ -17,7 +17,7 @@ public class Program {
 
         System.out.print("Enter the number os emplyees: ");
         int n = sc.nextInt();
-        for (int i = 1; i<n; i++){
+        for (int i = 1; i<=n; i++){
             System.out.println("Employee #" + i + " data:");
             System.out.print("Outsourced (y/n)? ");
             char ch = sc.next().charAt(0);
@@ -40,14 +40,11 @@ public class Program {
             }
         }
 
-
-
-
-
-
-
-
-
+        System.out.println();
+        System.out.println("PAYMENTS:");
+        for(Employee emp : list){
+            System.out.println(emp.getName() + " - $ " + String.format("%.2f", emp.payment()));
+        }
 
 
 
